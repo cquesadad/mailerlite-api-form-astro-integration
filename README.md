@@ -10,7 +10,7 @@
 
 Primero que todo, veamos la estructura que he creado en el repositorio de Github de muestra.
 
-Los archivos que he agregado son `SubscribeForm.tsx` y `subscribe.json.ts`. Estos son los que deberás agregar. Adiconalmente deberás hacer cambios en el archivo de `astro.config.mjs` y crear un archivo `.env`.
+Los archivos que he agregado son `SubscribeForm.tsx` y `subscribe.json.ts`. Estos son los que deberás agregar. Adicionalmente deberás hacer cambios en el archivo de `astro.config.mjs` y crear un archivo `.env`.
 
 Una web accesible no solo es fundamental para la inclusión, sino que también mejora la experiencia de todos los usuarios, haciendo que los sitios sean más intuitivos y fáciles de usar, incluso para clientes que no tienen limitaciones.
 
@@ -34,7 +34,7 @@ Una web accesible no solo es fundamental para la inclusión, sino que también m
 
 ## 1. Configuración de Astro para SSR y Vercel
 
-Para habilitar el renderizado hybrid de Astro, debes modificar tu archivo de configuración `astro.config.mjs`. Esto te permitirá que los componentes o rchivos que desees utilicen renderizado del lado del servidor, mientras que el resto se mantendrá estático. Usamos Vercel como adaptador para el despliegue.
+Para habilitar el renderizado hybrid de Astro, debes modificar tu archivo de configuración `astro.config.mjs`. Esto te permitirá que los componentes o archivos que desees utilicen renderizado del lado del servidor, mientras que el resto se mantendrá estático. Usamos Vercel como adaptador para el despliegue.
 
 Primero vamos a utilizar la función rápida de instalación para las integraciones de Preact y Vercel en nuestro proyecto
 
@@ -72,7 +72,7 @@ Esta configuración permite a Astro generar contenido estático por defecto en t
 
 ## 2. Gestión del API Key
 
-Previamente debes acceder a tu cuenta de Mailerlite y en el apartado de integrations usar la API creando una nueva API Key. Esto te generará el hash que debes utilizar en el archivo. Para trabajar de forma segura con la clave API de Mailerlite, crea el archivo .env en la raiz del proyecto.
+Previamente debes acceder a tu cuenta de Mailerlite y en el apartado de integrations usar la API creando una nueva API Key. Esto te generará el hash que debes utilizar en el archivo. Para trabajar de forma segura con la clave API de Mailerlite, crea el archivo .env en la raíz del proyecto.
 
 Solamente para tu sitio en desarrollo en el entorno local, posteriormente si lo publicas en Vercel deberás agregarlo a las variables de entorno del proyecto.
 
@@ -86,7 +86,7 @@ MAILERLITE_API_KEY=TU_API_KEY_AQUI
 
 ## 3. Componente del Formulario
 
-Crea el componente que tendrá el formulario de Preact con el nombre `SubscribeForm.tsx`. Este componente se encarga de maneja el estado del formulario, los errores y envía la información al endpoint /pages/api/subscribe.
+Crea el componente que tendrá el formulario de Preact con el nombre `SubscribeForm.tsx`. Este componente se encarga de manejar el estado del formulario, los errores y envía la información al endpoint /pages/api/subscribe.
 
 ```
 import { useState } from 'preact/hooks';
@@ -268,7 +268,7 @@ export const POST: APIRoute = async ({ request }) => {
 
 ## Conclusiones
 
-Si sigues los pasos y utilizas el código adecuadamente tendrás un formulario de suscripción funcional que se comunica con la API de Mailerlite en un entorno SSR híbrido usando Astro y Preact. Ten en cuenta la seguridad a la hora de gestionar tu claves API tanto en modo desarrollo como en tu sitio en producción.
+Si sigues los pasos y utilizas el código adecuadamente tendrás un formulario de suscripción funcional que se comunica con la API de Mailerlite en un entorno SSR híbrido usando Astro y Preact. Ten en cuenta la seguridad a la hora de gestionar tus claves API tanto en modo desarrollo como en tu sitio en producción.
 
 **→ Si tienes dudas puedes suscribirte o escribirme a** [info@cquesada.es](mailto:info@cquesada.es)
 
