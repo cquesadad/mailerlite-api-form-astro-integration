@@ -65,11 +65,11 @@ export const POST: APIRoute = async ({ request }) => {
 			} else {
 				const errorResponse = await response.text();
 				console.error('Failed to add contact:', errorResponse);
-				return new Response(JSON.stringify({ message: 'Failed to add contact' }), { status: 400 });
+				return new Response(JSON.stringify({ message: 'Fallo al añadir el contacto' }), { status: 400 });
 			}
 		} catch (error) {
 			console.error('An unexpected error occurred:', error);
-			return new Response(JSON.stringify({ message: 'An unexpected error occurred' }), { status: 500 });
+			return new Response(JSON.stringify({ message: 'Un error inesperado ha ocurrido' }), { status: 500 });
 		}
 	}
 
