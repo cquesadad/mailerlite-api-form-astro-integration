@@ -1,0 +1,32 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SubscribeForm } from '../components/newsletter/SubscribeForm';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="text-center">
+			<h1>🧑‍🚀 Newsletter form</h1>
+			<div class="bg-white p-5 rounded-xl text-center items-center justify-center flex my-7">
+
+				<SubscribeForm client:load />
+			</div>
+			<p>
+				Welcome to this file tutorial developed by <a href="https://cquesada.es">Carlos Quesada</a> You can ask me on Linkedin and Subscrite to my Newsletter at my portfolio website.
+			</p>
+			<p>
+				Find the code to integrate an Astro Preact form to add leads with the Mailerlite API
+			</p>
+			
+		</main>
+		<Footer />
+	</body>
+</html>
